@@ -20,10 +20,6 @@ The captions were written by Gemini from the factual Bangla captions of each ima
 - Flickr30k images can be obtained from the Flickr30k authors under their terms. Their factual Bangla captions come from BanglaView.
 - The Bangladeshi photographs are not distributed.
 
-`data/splits/` contains:
-- The train, validation and test image ids (32,618 / 2,000 / 1,000).
-- The humorous and romantic captions of the validation and test images. The test captions are used as references in the evaluation.
-
 `data/style_guide_bn.md` is the style guide given to the caption generator.
 
 ## Model
@@ -41,18 +37,14 @@ Final settings:
 
 | Script | Purpose |
 |---|---|
-| `code/prepare_splits.py` | Build the train, validation and test splits |
 | `code/extract_features.py` | Encode images and captions with NLLB-CLIP |
 | `code/stage1.py` | Train the factual captioner |
 | `code/stage2.py` | Train one style model (`--style humorous` or `--style romantic`) |
-| `code/tune_style.py` | Choose the offset scale on the validation set |
 | `code/generate.py` | Generate captions for test images |
 | `code/evaluate.py` | CLIP-S and style accuracy |
 | `code/style_classifier.py` | Independent style classifier |
-| `code/tools/` | Data generation, BERTScore, retrieval, LLM judge, significance tests and diversity |
 
-Run each script with `--help` to see its arguments. Default paths point to Kaggle inputs and can be changed on the command line. API keys are read from environment variables, for example `GEMINI_API_KEY`.
-
+Run each script with `--help` to see its arguments. Default paths point to Kaggle inputs and can be changed on the command line.
 ## Requirements
 
 ```
