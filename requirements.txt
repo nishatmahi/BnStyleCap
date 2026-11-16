@@ -1,0 +1,8 @@
+torch
+transformers
+open_clip_torch
+pillow
+numpy
+scipy
+bert-score
+pycocoevalcap
