@@ -45,6 +45,10 @@ Final settings:
 | `code/style_classifier.py` | Independent style classifier |
 
 Run each script with `--help` to see its arguments. Default paths point to Kaggle inputs and can be changed on the command line.
+## License
+
+The code is released under the MIT License (`LICENSE`). The BnHumor17K and BnRomance17K caption files are released under CC BY 4.0 (`data/LICENSE`). Please cite the BnStyleCap paper when using them.
+
 ## Requirements
 
 ```
